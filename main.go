@@ -4,13 +4,12 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"tutofox.com/m/initializers"
+	"tutofox.com/m/configs"
 	"tutofox.com/m/routes"
 )
 
 func init() {
-	initializers.LoadEnvVariables()
-	initializers.ConnectToDB()
+	configs.ConnectToDB()
 }
 
 func main() {
